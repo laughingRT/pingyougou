@@ -1,0 +1,18 @@
+body{
+  line-height: normal;
+}
+.pyg_view{
+  overflow: hidden;
+  display: flex;
+  .left{
+    width: 1rem;
+    font-size: .2rem;
+    background-color: sandybrown;
+    overflow: hidden;
+  }
+  .right{
+    flex: 1;
+    background-color: yellowgreen;
+    overflow: hidden;
+  }
+}
