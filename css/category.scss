@@ -7,12 +7,56 @@ body{
   .left{
     width: 1rem;
     font-size: .2rem;
-    background-color: sandybrown;
     overflow: hidden;
+    ul{
+      li{
+        text-align: center;
+        font-size: .16rem;
+        padding: .05rem 0;
+      }
+      .active{
+        background-color: #fff;
+        border-left: 3px solid #0094ff;
+      }
+    }
   }
   .right{
     flex: 1;
-    background-color: yellowgreen;
     overflow: hidden;
+    background-color: #fff;
+    .goods_group{
+      font-size: .14rem;
+      .goods_title{
+        color: #0094ff;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 15px;
+        >span:nth-child(1){
+          padding: .05rem;
+        }
+        >span:nth-child(2){
+          flex: 1;
+          height: 1px;
+          background-color: #000000;
+          align-self: center;
+        }
+      }
+      ul{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        li{
+          width: 33.33%;
+          text-align: center;
+          a{
+            color: #000;
+            img{
+              width: 60%;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
   }
 }
