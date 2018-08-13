@@ -1,0 +1,103 @@
+.pyg_view{
+  background-color: #fff;
+  padding: 10px;
+  .goods_name{
+    font-size: 15px;
+    padding: 5px 0;
+  }
+  .goods_price{
+    font-size: 25px;
+    color: orange;
+    padding: 5px 0;
+  }
+  .goods_send{
+    ul{
+      font-size: 13px;
+      li{
+        padding: 10px 0;
+        border-bottom: 1px solid pink;
+        display: flex;
+        span:first-child{
+          flex: 1;
+          color: #666;
+        }
+        span:last-child{
+          flex: 2;
+          color: #000;
+        }
+      }
+    }
+  }
+  .goods_des{
+    #item1{
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    }
+    #item2{
+      ul{
+        background-color: #efeff4;
+        font-size: 14px;
+        padding: 5px;
+        list-style: none;
+        li{
+          .gd_title{
+            font-weight: 600;
+            padding: 5px;
+            font-size: 16px;
+            border-bottom: 1px solid #000;
+          }
+          .gd_content{
+            padding: 5px;
+            display: flex;
+            span:nth-child(1){
+              flex: 1;
+            }
+            span:nth-child(2){
+              flex: 2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 底部
+.pyg_tool{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  a{
+    flex: 1;
+    font-size: 14px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 8px;
+    border-right: 1px solid #666;
+    .mui-icon{
+      font-size: 18px;
+    }
+  }
+  a:last-child{
+    border-right: none;
+  }
+  .buy_btn{
+    background-color: #ffaa00;
+    color: #fff;
+    border-right:1px solid white;
+  }
+  .add_btn{
+    background-color: #ff6600;
+    color: #fff;
+  }
+}

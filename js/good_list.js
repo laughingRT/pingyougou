@@ -1,7 +1,7 @@
 $(function(){
   var QueryObj = {
     query: "",
-    cid: getValue("cid"),
+    cid: $.getURLValue("cid"),
     pagenum: 1,
     pagesize: 8
   };
@@ -9,6 +9,7 @@ $(function(){
   var totalPage = 1;
   init();
   function init(){
+    eventList();
     mui.init({
       pullRefresh: {
         container: ".pyg_view",
@@ -51,13 +52,7 @@ $(function(){
     });
   }
 
-  // 根据url上的key来获取值
-  function getValue(name) {
-    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-    var r = window.location.search.substr(1).match(reg);
-    if (r != null) return decodeURI(r[2]);
-    return null;
-  }
+
 
   // 获取列表数据
   function search(callback){
@@ -71,6 +66,16 @@ $(function(){
       $(".pyg_view ul").append(html);
 
       callback&&callback();
+    })
+  }
+
+  function eventList(){
+    // 给内容里面的a标签绑定tap 
+    $(".pyg_view").on("tap","a",function(){
+      // console.log("这是a触发");
+      var href = this.href;
+      // console.log(href);
+      location.href = href;
     })
   }
 })
