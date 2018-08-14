@@ -38,8 +38,17 @@ $(function(){
           // console.log("cg");
           // 提示
           mui.toast(res.meta.msg);
+
+          // 登录成功，存储用户信息到永久存储中
+          localStorage.setItem("userinfo",JSON.stringify(res.data));
           setTimeout(function(){
-            location.href="/index.html"
+            // 直接跳转首页体验不好，判断是否有来源页面 没有再去跳转到首页
+            var pageName = sessionStorage.getItem("pageName");
+            if(pageName){
+              location.href=pageName;
+            }else{
+            location.href="/index.html";
+            }
           }, 1000);
         }else{
           mui.toast(res.meta.msg);
