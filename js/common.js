@@ -53,6 +53,20 @@ $(function (){
       } else {　　　　
         return false;
       }
+    },
+    checkLogin:function(){
+      // 判断永久存储中有没有userinfo
+      return localStorage.getItem("userinfo");
+    },
+    token:function (){
+      // 如果userinfo 存在 返回token 否则返回""
+      var token;
+      if(!localStorage.getItem("userinfo")){
+        token = "";
+      }else {
+        token = JSON.parse(localStorage.getItem("userinfo")).token;
+      }
+      return token;
     }
   })
 })

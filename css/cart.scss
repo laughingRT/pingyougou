@@ -1,0 +1,128 @@
+@mixin ellipse($c){
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal !important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: $c;
+  -webkit-box-orient: vertical;
+}
+body{
+  display: none;
+}
+//delete_btn先隐藏
+#delete_btn{
+  display: none;
+}
+
+.pyg_view{
+  padding: 50px 15px;
+  .address{
+    .addr_title{
+      color: #666;
+      font-size: 14px;
+    }
+    .addr_content{
+      padding: 10px;
+      background-color: #fff;
+      display: flex;
+      .fa{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 26px;
+      }
+      .addr_des{
+        flex: 7;
+        .ad_content{
+          font-size: 13px;
+          color: #666;
+        }
+      }
+    }
+  }
+  .order{
+    .order_title{
+      margin-top: 40px;
+      color: #666;
+      font-size: 14px;
+    }
+    .order_content{
+      display: flex;
+      justify-content: space-between;
+      background-color: #fff;
+      padding: 10px 20px;
+      .o_create{
+        color: red;
+      }
+    }
+  }
+  .pyg_cart{
+    margin-top: 40px;
+    .p_cart_title{
+      color: #666;
+      font-size: 14px;
+    }
+    .p_cart_content{
+      background-color: #fff;
+      ul{
+        list-style: none;
+        li{
+          display: flex;
+          padding: 10px 0;
+          border-bottom: 1px solid #ccc;
+          .goods_chk{
+            flex: 1;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            input{
+              position: static;
+            }
+          }
+          .goods_img{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .goods_tool{
+            flex: 5;
+            padding: 0 10px;
+            .goods_name{
+              color: #666;
+              font-size: 14px;
+              @include ellipse(2);
+            }
+            .goods_nums{
+              display: flex;
+              padding: 10px 0;
+              justify-content: space-between;
+              .g_price{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+              .mui-numbox{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#pyg_body.edit_status{
+  #delete_btn{
+    display: block;
+  }
+  .goods_chk{
+    display: flex;
+  }
+  .mui-numbox{
+    display: block;
+  }
+}

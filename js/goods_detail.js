@@ -12,7 +12,7 @@ $(function(){
     $(".add_btn").on("tap",function(){
 
       // 未登录之前 是没有token的，直接获取报错 判断
-      if(!localStorage.getItem("userinfo")){
+      if(!$.checkLogin()){
         // 没有信息 未登录过
         mui.toast("未登录");
         // 在会话存储中保存当前页面的路径，用户登录后可以跳转回来
@@ -34,7 +34,7 @@ $(function(){
       };
         // 未登录之前 是没有token的，直接获取报错
 
-      var token = JSON.parse(localStorage.getItem("userinfo")).token;
+      var token = $.token();
       // 发送token 请求头 需要用ajax
       $.ajax({
         "url":"my/cart/add",
