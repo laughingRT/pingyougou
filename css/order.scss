@@ -1,0 +1,35 @@
+body{
+  display: none;
+}
+.main_content{
+  // 标题栏
+  #segmentedControl{
+    a{
+      background-color: #fff;
+    }
+  }
+}
+#item1{
+  padding: 20px;
+  ul{
+    list-style: none;
+    background-color: #fff;
+    padding: 10px;
+    li{
+      display: flex;
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+      .o1{
+        flex: 3;
+        overflow: hidden;
+        .order_num_content{
+          display: block;
+        }
+      }
+      .order_price{
+        flex: 1;
+        color: red;
+      }
+    }
+  }
+}

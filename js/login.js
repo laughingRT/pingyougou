@@ -40,10 +40,10 @@ $(function(){
           mui.toast(res.meta.msg);
 
           // 登录成功，存储用户信息到永久存储中
-          localStorage.setItem("userinfo",JSON.stringify(res.data));
+          $.setUser(res.data);
           setTimeout(function(){
             // 直接跳转首页体验不好，判断是否有来源页面 没有再去跳转到首页
-            var pageName = sessionStorage.getItem("pageName");
+            var pageName = $.getPage();
             if(pageName){
               location.href=pageName;
             }else{

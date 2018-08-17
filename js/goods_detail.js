@@ -16,7 +16,7 @@ $(function(){
         // 没有信息 未登录过
         mui.toast("未登录");
         // 在会话存储中保存当前页面的路径，用户登录后可以跳转回来
-        sessionStorage.setItem("pageName", location.href);
+        $.setPage();
         setTimeout(function () {
           location.href = "/pages/login.html";
         }, 1000)
@@ -47,7 +47,7 @@ $(function(){
           if (res.meta.status == 401) {
             mui.toast("未登录");
             // 在会话存储中保存当前页面的路径，用户登录后可以跳转回来
-            sessionStorage.setItem("pageName", location.href);
+            $.setPage();
             setTimeout(function () {
               location.href = "/pages/login.html";
             }, 1000)

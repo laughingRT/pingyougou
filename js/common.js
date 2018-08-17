@@ -67,6 +67,26 @@ $(function (){
         token = JSON.parse(localStorage.getItem("userinfo")).token;
       }
       return token;
+    },
+    // 把当前页面存放到 会话存储 中
+    setPage:function(){
+      sessionStorage.setItem("pageName", location.href);
+    },
+    // 把页面的URL从 会话存储 中取出
+    getPage: function(){
+      return sessionStorage.getItem("pageName");
+    },
+    // 把用户信息存放到 永久存储 中
+    setUser: function(obj){
+      localStorage.setItem("userinfo",JSON.stringify(obj));
+    },
+    // 从 永久存储 中取出 用户信息
+    getUser: function(){
+      return localStorage.getItem("userinfo")?JSON.parse(localStorage.getItem("userinfo")):false;
+    },
+    // 删除永久存储中的userinfo数据
+    removeUser: function(){
+      localStorage.removeItem("userinfo");
     }
-  })
+  });
 })

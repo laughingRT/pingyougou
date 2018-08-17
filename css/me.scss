@@ -1,0 +1,50 @@
+body{
+  display: none;
+}
+.pyg_view{
+  padding: 20px 10px;
+  .userinfo{
+    background-color: #fff;
+    padding: 10px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    .fa{
+      flex: 1;
+      font-size: 30px;
+    }
+    .user_wrap{
+      flex: 4;
+      .user_email{
+        font-size: 14px;
+        color: #666;
+      }
+    }
+  }
+  .order{
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    .order_title{
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    .order_content{
+      display: flex;
+      text-align: center;
+      a{
+        flex: 1;
+        font-size: 13px;
+        .fa{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .me_tool{
+    margin-top: 20px;
+    button{
+      width: 100%;
+    }
+  }
+}
